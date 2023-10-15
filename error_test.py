@@ -7,6 +7,7 @@ x = {"a": 37, "b": 42, "c": 927}
 y = "hello " "world"
 z = "hello " + "world"
 a = "hello {}".format("world")
+b = f"hello {'world'}"
 
 
 class foo(object):
