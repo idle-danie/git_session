@@ -25,7 +25,7 @@ resource "aws_iam_role_policy_attachment" "lambda_policy_attachment" {
 
 resource "aws_lambda_function" "this" {
   filename      = "lambda_function_payload.zip"
-  function_name = "example_lambda"
+  function_name = "lambda_function"
   handler       = "lambda_function.lambda_handler"
   role          = aws_iam_role.lambda_role.arn
   runtime       = "python3.9"
