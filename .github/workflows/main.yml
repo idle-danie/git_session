@@ -13,6 +13,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
+    - name: Install zip
+      run: sudo apt-get install zip
+
+    - name: Zip the lambda function
+      run: zip -r lambda_function_payload.zip lambda_function.py
+
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
