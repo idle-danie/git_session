@@ -1,2 +1,6 @@
 venv
 .terraform
+.env
+terraform.tfstate
+.terraform.lock.hcl
+```
