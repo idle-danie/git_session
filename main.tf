@@ -1,7 +1,16 @@
 provider "aws" {
   access_key = var.AWS_ACCESS_KEY_ID
   secret_key = var.AWS_SECRET_ACCESS_KEY
-  region     = var.AWS_REGION
+}
+
+variable "AWS_ACCESS_KEY_ID" {
+  description = "AWS Access Key"
+  type        = string
+}
+
+variable "AWS_SECRET_ACCESS_KEY" {
+  description = "AWS Secret Access Key"
+  type        = string
 }
 
 resource "aws_iam_role" "lambda_role" {
